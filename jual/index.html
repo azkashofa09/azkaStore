@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegant Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">Azka Store</div>
+        <div class="menu-toggle" id="menuToggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <!-- Tombol chat WhatsApp -->
+<!-- Tombol chat WhatsApp dengan gambar ikon -->
+<a href="https://wa.me/6285774751740" class="chat-btn" target="_blank" aria-label="Chat with us on WhatsApp">
+    <img src="pngtree-whatsapp-icon-png-image_3584844-removebg-preview (1).png" alt="WhatsApp Icon">
+</a>
+    </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products" class="smooth-scroll">Products</a></li>
+                <li><a href="#" id="contactLink" class="smooth-scroll">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="overlay">
+            <h1>Discover Elegance</h1>
+            <p>Find the perfect products that match your style</p>
+            <a href="#products" class="btn smooth-scroll">Shop Now</a>
+        </div>
+    </section>
+
+    <section class="products" id="products">
+        <h2 >Our Featured Products</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="10--merek-jam-tangan--mahal-dengan-harga-melebihi-mobil-suv-nfu.jpg" alt="Product 1">
+                <h3>Luxury Watch</h3>
+                <p>$250</p>
+                <a href="https://wa.me/6285774751740?text=Hi%20I%20am%20interested%20in%20buying%20Luxury%20Watch" class="btn">Buy Now</a>
+            </div>
+            <div class="product">
+                <img src="676955172.jpg" alt="Product 2">
+                <h3>Elegant Handbag</h3>
+                <p>$300</p>
+                <a href="https://wa.me/6285774751740?text=Hi%20I%20am%20interested%20in%20buying%20Elegant%20Handbag" class="btn">Buy Now</a>
+            </div>
+            <div class="product">
+                <img src="4.-Nike-Mag-Self-Lacing-Training-Shoes.jpg" alt="Product 3">
+                <h3>Stylish Shoes</h3>
+                <p>$180</p>
+                <a href="https://wa.me/6285774751740?text=Hi%20I%20am%20interested%20in%20buying%20Stylish%20Shoes" class="btn">Buy Now</a>
+            </div>
+        </div>
+
+    </section>
+
+    <footer id="contact">
+        <p>Contact us: <a href="mailto:azkashofa6@gmail.com">azkashofa6@gmail.com</a></p>
+        <p>&copy; 2024 Azka Store. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling when clicking on anchor links
+        document.querySelectorAll('.smooth-scroll').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+
+        // Toggle menu visibility
+        const menuToggle = document.getElementById('menuToggle');
+        const nav = document.querySelector('header nav');
+
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('nav-active');
+        });
+
+        // Show alert when clicking "Contact" link
+        document.getElementById('contactLink').addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent default link action
+            alert('Contact me at: 085774751740');
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
